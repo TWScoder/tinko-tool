@@ -1,0 +1,21 @@
+#!/bin/bash
+
+MESSAGE=/home/thomas/bin/motd.motd
+cat $MESSAGE
+cat $MESSAGE >> /home/thomas/bin/all/log.txt
+sleep 0.5
+date >> /home/thomas/bin/all/log.txt
+cat $MESSAGE > /home/thomas/bin/previous.motd
+sleep 1
+echo "Edit this file for the message of the day" > /home/thomas/bin/motd.motd
+
+sleep 3
+
+echo "MOTD Reset"
+echo "MOTD Exported to /home/thomas/motd/all/log.txt"
+sleep 0.5
+#uncomment below line to enable defualt motd
+cat /home/thomas/bin/.defualtmotd > /home/thomas/bin/motd.motd
+
+echo "PLease read documentation on /home/thomas/bin/docs.txt"
+

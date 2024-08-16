@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "System Stats Displaying..."
+lscpu
+sleep 6
+lspci
+sleep 4
+lsmem
+sleep 7
+lsusb
+sleep 4
+echo "Displaying File Procceses..."
+sleep 4
+lsof
+echo "Read docs for tinko-tool program for more info"
+
+
+

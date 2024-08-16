@@ -1,0 +1,39 @@
+#!/bin/bash
+EDITOR=vim
+cat /home/thomas/ascii
+echo "Welcome to the tinko-tool"
+sleep 1
+case ${1,,} in
+        	motd)
+                echo "Running MOTD Tool"
+		sleep 1
+		motd
+		;;
+                system-info)
+                echo "Running system-info tool"
+		sleep 1
+                system-info
+                ;;
+                help)
+                echo "Displaying Help & Docs"
+		sleep 1
+                EDITOR /home/thomas/bin/tinko-tool-docs.md
+                ;;
+		edit.motd)
+		echo"Entering Edit Mode For MOTD Program"
+		sleep 1
+		EDITOR /home/thomas/bin/motd
+		;;
+		edit.system-info)
+		echo "Entering Edit Mode for System-Info Program"
+		sleep 1
+		EDITOR /home/thomas/bin/system-info
+		;;
+		*)
+                echo "Please provide and option between system-info and motd after the program name, please type help after the program name to display help & docs"
+
+
+
+esac
+
+
